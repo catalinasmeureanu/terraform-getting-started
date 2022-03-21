@@ -316,4 +316,4 @@ This tutorial shows how to build infrastructure based on an a Terraform configur
 
 * More details about [Terraform configuration](https://www.terraform.io/language)
 * Lean more about [Terraform providers](https://www.terraform.io/language/providers)
-* Read about Terraform commands [init](https://www.terraform.io/cli/commands/init),[apply](https://www.terraform.io/cli/commands/apply), [destroy] (https://www.terraform.io/cli/commands/destroy)
+* Read about Terraform commands [init](https://www.terraform.io/cli/commands/init),[apply](https://www.terraform.io/cli/commands/apply), [destroy](https://www.terraform.io/cli/commands/destroy)
