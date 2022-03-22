@@ -6,8 +6,8 @@ This tutorial shows how to use Terraform to create an NGINX server running on Do
 
 # Prerequisites
 
-* Terraform CLI version 1.0.0+ installed
-* Docker version 20.10.11+
+* Terraform CLI version 1.0.0 or later installed
+* [Docker Desktop](https://docs.docker.com/get-docker/) version 20.10.11 or later installed and running
 
 
 # Install Terraform
