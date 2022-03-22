@@ -1,24 +1,25 @@
 # Getting Started with Terraform
 
 Terraform is the most popular language for defining and provisioning infrastructure as code (IaC).
-This tutorial shows how to build and destroy Docker infrastructure using Terraform. 
+
+This tutorial shows how to use Terraform to create an NGINX server running on Docker. 
 
 # Prerequisites
 
 * Terraform CLI version 1.0.0+ installed
-* Docker version 20.10.11
+* Docker version 20.10.11+
 
 
 # Install Terraform
 
-To install Terraform, visit [Terraform.io](https://www.terraform.io/downloads.html) and download the compressed binary application executable file deliverable for your platform, machine or environment on which you like to run code and do development.
+To install Terraform, visit [Terraform.io](https://www.terraform.io/downloads.html) and download the appropriate package for your system and unzip it.
 
 # Build infrastructure - Terraform Docker Example
 
-After you installed Terraform, you can start creating your infrastructure.
+With Terraform installed start creating your infrastructure.
 
 
-1. We recommend to create a new directory on your local machine that will store Terraform configuration code inside.
+1. We recommend to create a new directory on your local machine for Terraform configuration code.
 
 ```shell
 $ mkdir terraform-demo
@@ -31,7 +32,7 @@ $ cd terraform-demo
 $ touch main.tf
 ```
 
-3. Paste the following lines into the file.
+3. Paste the following content into `main.tf` file and save it:
 
 ```hcl
 terraform {
@@ -57,7 +58,7 @@ resource "docker_image" "nginx" {
 }
 ```
 
-4. Initialize Terraform with the `init` command. The Docker provider will be installed. 
+4. Initialize the working directory by running the command `terraform init`. Terraform downloads the necessary provider resources, in this case Docker provider. 
 
 ```shell
 $ terraform init
@@ -90,7 +91,7 @@ commands will detect it and remind you to do so if necessary.
 
 ```
 
-5. Check for any errors. If it ran successfully, provision the resource with the `apply` command.
+5. If the initialization is succesfull, provision the resource with the command `terraform apply`:
 
 ```shell
 $ terraform apply
@@ -182,7 +183,9 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 6. After your approval of the plan, it takes up to a few minutes to create the resources. 
 
-7. Destroy the infrastructure:
+# Destroy Infrastructure
+
+Destroy the infrastructure when you no longer need it:
 
 ```shell
 $ terraform destroy
@@ -308,7 +311,7 @@ Do you really want to destroy all resources?
 
 ```
 
-8. Terraform asks for confirmation. Enter `yes` to destroy all the resources created.
+Terraform asks for confirmation. Enter `yes` to destroy all the resources created.
 
 # Next steps
 
@@ -316,4 +319,4 @@ This tutorial shows how to build infrastructure based on an a Terraform configur
 
 * More details about [Terraform configuration](https://www.terraform.io/language)
 * Lean more about [Terraform providers](https://www.terraform.io/language/providers)
-* Read about Terraform commands [init](https://www.terraform.io/cli/commands/init),[apply](https://www.terraform.io/cli/commands/apply), [destroy](https://www.terraform.io/cli/commands/destroy)
+* Read about Terraform commands [init](https://www.terraform.io/cli/commands/init), [apply](https://www.terraform.io/cli/commands/apply), [destroy](https://www.terraform.io/cli/commands/destroy)
