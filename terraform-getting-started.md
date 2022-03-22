@@ -19,14 +19,14 @@ To install Terraform, visit [Terraform.io](https://www.terraform.io/downloads.ht
 With Terraform installed start creating your infrastructure.
 
 
-1. We recommend to create a new directory on your local machine for Terraform configuration code.
+1. We recommend to create a new directory on your local machine to store the Terraform configuration code.
 
 ```shell
 $ mkdir terraform-demo
 $ cd terraform-demo
 ```
 
-2. Create a file called `main.tf` for Terraform configuration code.
+2. Create a file called `main.tf` to define the infrastructure:
 
 ```shell
 $ touch main.tf
